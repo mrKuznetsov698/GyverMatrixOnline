@@ -1,8 +1,8 @@
 from flask import Flask, send_file
 
 app = Flask(__name__)
-ledW = 16
-ledH = 16
+ledW = 96
+ledH = 64
 matrix = [[0 for j in range(ledH)] for i in range(ledW)]
 
 

@@ -1,7 +1,7 @@
-let ledW = 16;
-let ledH = 16;
-let ledS = 40;
-let ledOffset = 3;
+let ledW = 96;
+let ledH = 64;
+let ledS = 20;
+let ledOffset = 1;
 let canvas;
 let Width = ledW * ledS + (ledW + 1) * ledOffset;
 let Height = ledH * ledS + (ledH + 1) * ledOffset;
