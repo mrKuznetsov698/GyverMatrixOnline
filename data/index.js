@@ -6,7 +6,7 @@ let canvas;
 let Width = ledW * ledS + (ledW + 1) * ledOffset;
 let Height = ledH * ledS + (ledH + 1) * ledOffset;
 let colorpicker;
-const url = 'https://ars-matrix.robotesla.keenetic.pro/';
+const url = 'https://ars-matrix.robotesla.keenetic.pro';
 
 class Pos {
     constructor(x, y) {
