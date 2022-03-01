@@ -1,8 +1,8 @@
 from flask import Flask, send_file
 
 app = Flask(__name__)
-ledW = 96
-ledH = 64
+ledW = 16
+ledH = 16
 matrix = [[0 for j in range(ledH)] for i in range(ledW)]
 
 
@@ -43,4 +43,4 @@ def hex_to_rgb(val):
     return (val >> 16) & 0xff, (val >> 8) & 0xff, (val & 0xff)
 
 
-app.run(host='0.0.0.0', port=8888)
+app.run(host='0.0.0.0', port=80)
