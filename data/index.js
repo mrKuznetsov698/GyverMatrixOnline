@@ -6,6 +6,7 @@ let canvas;
 let Width = ledW * ledS + (ledW + 1) * ledOffset;
 let Height = ledH * ledS + (ledH + 1) * ledOffset;
 let colorpicker;
+const url = 'https://ars-matrix.robotesla.keenetic.pro/';
 
 class Pos {
     constructor(x, y) {
@@ -54,7 +55,7 @@ function init_arrays() {
 
 function update_matrix(){
     let xhr = new XMLHttpRequest()
-    xhr.open('GET', '/api/get')
+    xhr.open('GET', url+'/api/get')
     xhr.send()
     xhr.onload = function () {
         let doc = JSON.parse(xhr.response)
@@ -90,10 +91,10 @@ function mouse_handler(event){
             let r = hex_to_rgb(val)[0];
             let g = hex_to_rgb(val)[1];
             let b = hex_to_rgb(val)[2];
-            send('/api/set/' + x + '/' + y + '/' + r + '/' + g + '/' + b)
+            send(url+'/api/set/' + x + '/' + y + '/' + r + '/' + g + '/' + b)
         }
         else {
-            send('/api/set/' + x + '/' + y + '/' + 0 + '/' + 0 + '/' + 0)
+            send(url+'/api/set/' + x + '/' + y + '/' + 0 + '/' + 0 + '/' + 0)
         }
     }
 }
